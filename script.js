@@ -1,10 +1,14 @@
 const display = document.getElementById('display');
 const operators = document.getElementsByClassName('operation_button');
 const normal = document.getElementsByClassName('normal_button');
+let current =[];
+
 
 function showOnDisplay(input) {
-    display.value += input;
-    
+     display.value += input;
+     current = display.value;
+     console.log(current);
+
 }
 
 function clearDisplay() {
@@ -12,5 +16,12 @@ function clearDisplay() {
 }
 
 function calculate(){
+    console.log(current);
+}
 
+function operator (input){
+    current += operator;
+    display.value = '';
+    display.value += input; 
+    
 }

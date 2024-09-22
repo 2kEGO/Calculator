@@ -25,6 +25,8 @@ Body {
     height: 10vh;
     background-color: #333333;
     border: 0;
+    color: white;
+    font-size: 24px;
 }
 
 #keys {
