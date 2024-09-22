@@ -1,0 +1,59 @@
+ @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+ *{
+     margin: 0;
+     padding: 0;
+     font-family: "Roboto", "Arial";
+ }
+Body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#calculator {
+    /* width: 70%; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    margin-top: 20vh;
+}
+
+#display {
+    width: 100%;
+    height: 10vh;
+    background-color: #333333;
+    border: 0;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    background-color: #262626;
+}
+
+#keys button {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 90%;
+}
+
+#keys button:hover{
+
+}
+
+.normal_button{
+    background-color: #333333;
+    color: white;
+    
+}
+
+.operation_button {
+    background-color: #ff9e1c;
+    color: white;
+}
