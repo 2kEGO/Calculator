@@ -1,14 +1,19 @@
 const display = document.getElementById('display');
-const operators = document.getElementsByClassName('operation_button');
 const normal = document.getElementsByClassName('normal_button');
 let current =[];
+let nums1 = [];
+let nums2 = [];
+let operator = '';
 
 
 function showOnDisplay(input) {
-     display.value += input;
-     current = display.value;
-     console.log(current);
-
+    display.value += input;
+    current = display.value;
+    const operatorIndex = current.search(/[+\-*/]/);
+    const nums1 = parseFloat(current.slice(0, operatorIndex));         
+    const operator = current[operatorIndex];              
+    const nums2 = parseFloat(current.slice(operatorIndex + 1));
+    console.log(nums1, operator, nums2);
 }
 
 function clearDisplay() {
@@ -16,12 +21,22 @@ function clearDisplay() {
 }
 
 function calculate(){
-    console.log(current);
-}
-
-function operator (input){
-    current += operator;
-    display.value = '';
-    display.value += input; 
-    
+    let result;
+    switch(operator) {
+        case '+':
+            result = nums1 + nums2;
+            break;
+        case '-':
+            result = nums1 - nums2;
+            break;
+        case 'x':
+            result = nums1 * nums2;
+            break;
+        case '/':
+            result = nums1 / nums2;
+            break;
+        default:
+            alert('Invalid operator');
+    }
+    display.value = result;
 }
