@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="calculator">
-        <input type="text" id="display" readonly>
+        <input id="display" readonly>
         <div id="keys">
-            <button onclick="showOnDisplay('+')" class="operation_button">+</button>
-            <button onclick="showOnDisplay('7')" class="normal_button">7</button>
-            <button onclick="showOnDisplay('8')" class="normal_button">8</button>
-            <button onclick="showOnDisplay('9')" class="normal_button">9</button>
-            <button onclick="showOnDisplay('-')" class="operation_button">-</button>
-            <button onclick="showOnDisplay('4')" class="normal_button">4</button>
-            <button onclick="showOnDisplay('5')" class="normal_button">5</button>
-            <button onclick="showOnDisplay('6')" class="normal_button">6</button>
-            <button onclick="showOnDisplay('x')" class="operation_button">X</button>
-            <button onclick="showOnDisplay('1')" class="normal_button">1</button>
-            <button onclick="showOnDisplay('2')" class="normal_button">2</button>
-            <button onclick="showOnDisplay('3')" class="normal_button">3</button>
-            <button onclick="showOnDisplay('/')" class="operation_button">/</button>
-            <button onclick="showOnDisplay('0')" class="normal_button">0</button>
-            <button onclick="showOnDisplay('.')" class="operation_button">.</button>
-            <button onclick="calculate()" class="operation_button">=</button>
-            <button onclick="clearDisplay()" class="operation_button">AC</button>
+            <button onclick="appendToDisplay('+')" class="operation_button" data-action="add">+</button>
+            <button onclick="appendToDisplay('7')" class="normal_button">7</button>
+            <button onclick="appendToDisplay('8')" class="normal_button">8</button>
+            <button onclick="appendToDisplay('9')" class="normal_button">9</button>
+            <button onclick="appendToDisplay('-')" class="operation_button" data-action="substract">-</button>
+            <button onclick="appendToDisplay('4')" class="normal_button">4</button>
+            <button onclick="appendToDisplay('5')" class="normal_button">5</button>
+            <button onclick="appendToDisplay('6')" class="normal_button">6</button>
+            <button onclick="appendToDisplay('*')" class="operation_button" data-action="multiply">*</button>
+            <button onclick="appendToDisplay('1')" class="normal_button">1</button>
+            <button onclick="appendToDisplay('2')" class="normal_button">2</button>
+            <button onclick="appendToDisplay('3')" class="normal_button">3</button>
+            <button onclick="appendToDisplay('/')" class="operation_button" data-action="divide">/</button>
+            <button onclick="appendToDisplay('0')" class="normal_button">0</button>
+            <button onclick="appendToDisplay('.')" class="operation_button" data-action="decimal">.</button>
+            <button onclick="calculate()" class="operation_button" data-action="equal">=</button>
+            <button onclick="clearDisplay()" class="operation_button" data-action="clear">AC</button>
 
     
         </div>
